@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF5F2ED),
       body: CustomScrollView(
         slivers: [
-          // ── Hero App Bar ────────────────────────────────────────────────
+
           SliverAppBar(
             expandedHeight: 200,
             pinned: true,
@@ -48,22 +48,21 @@ class HomeScreen extends StatelessWidget {
               background: Stack(
                 fit: StackFit.expand,
                 children: [
-                  // Deep gradient representing Andean landscape
+
                   Container(
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Color(0xFF0D2B1F), // Very deep forest
-                          Color(0xFF1B4332), // Forest green
-                          Color(0xFF2D6A4F), // Mid green
+                          Color(0xFF0D2B1F),
+                          Color(0xFF1B4332),
+                          Color(0xFF2D6A4F),
                         ],
                         stops: [0.0, 0.5, 1.0],
                       ),
                     ),
                   ),
-                  // Subtle geometric pattern overlay
                   Positioned(
                     right: -30,
                     top: -30,
@@ -94,7 +93,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Bottom fade
                   Positioned(
                     bottom: 0,
                     left: 0,
@@ -164,7 +162,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // ── Card List ────────────────────────────────────────────────────
           SliverPadding(
             padding: const EdgeInsets.only(bottom: 32),
             sliver: SliverList(

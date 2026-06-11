@@ -74,7 +74,7 @@ final List<Lugar> lugares = [
   ),
 
   Lugar(
-    image: 'images/Museo_Nacional.jpg',
+    image: 'images/Museo_Nacional.JPG',
     name: 'Museo Nacional del Ecuador',
     location: 'Casa de la Cultura Ecuatoriana',
     description:

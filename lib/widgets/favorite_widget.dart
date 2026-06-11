@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Matches the design tokens in lugar_card.dart
+
 const _kRed = Color(0xFFD4253A);
 const _kTextLight = Color(0xFF9B9B90);
 
@@ -60,7 +60,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Animated heart icon
+
           ScaleTransition(
             scale: _bounceAnim,
             child: AnimatedSwitcher(
@@ -82,7 +82,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
 
           const SizedBox(width: 6),
 
-          // Likes count with animated transition
+
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 180),
             transitionBuilder: (child, animation) => SlideTransition(

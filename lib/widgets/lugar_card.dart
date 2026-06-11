@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../models/lugar.dart';
 import 'favorite_widget.dart';
 
-// ── Design tokens ────────────────────────────────────────────────────────────
-const _kGreen = Color(0xFF1B4332);       // Andean forest green — primary
-const _kGold = Color(0xFFD4A853);        // Colonial gold — accent
-const _kTextDark = Color(0xFF1A1A18);    // Near-black — headings
-const _kTextMid = Color(0xFF5C5C54);     // Mid-tone — body
+
+const _kGreen = Color(0xFF1B4332);
+const _kGold = Color(0xFFD4A853);
+const _kTextDark = Color(0xFF1A1A18);
+const _kTextMid = Color(0xFF5C5C54);
 
 class LugarCard extends StatefulWidget {
   const LugarCard({
@@ -107,7 +107,7 @@ class _LugarCardState extends State<LugarCard>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Hero image ─────────────────────────────────────────────
+
               Stack(
                 children: [
                   ClipRRect(
@@ -122,7 +122,7 @@ class _LugarCardState extends State<LugarCard>
                     ),
                   ),
 
-                  // Bottom gradient scrim for readability
+
                   Positioned(
                     bottom: 0,
                     left: 0,
@@ -145,7 +145,7 @@ class _LugarCardState extends State<LugarCard>
                     ),
                   ),
 
-                  // Location pill — bottom left of image
+
                   Positioned(
                     bottom: 12,
                     left: 14,
@@ -170,7 +170,7 @@ class _LugarCardState extends State<LugarCard>
                     ),
                   ),
 
-                  // Favorite button — top right of image
+
                   Positioned(
                     top: 10,
                     right: 10,
@@ -182,13 +182,13 @@ class _LugarCardState extends State<LugarCard>
                 ],
               ),
 
-              // ── Text content ───────────────────────────────────────────
+
               Padding(
                 padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Name
+
                     Text(
                       widget.lugar.name,
                       style: const TextStyle(
@@ -202,7 +202,7 @@ class _LugarCardState extends State<LugarCard>
 
                     const SizedBox(height: 8),
 
-                    // Thin divider with gold accent
+
                     Row(
                       children: [
                         Container(
@@ -227,7 +227,7 @@ class _LugarCardState extends State<LugarCard>
 
                     const SizedBox(height: 10),
 
-                    // Description
+
                     Text(
                       widget.lugar.description,
                       style: const TextStyle(
@@ -240,10 +240,10 @@ class _LugarCardState extends State<LugarCard>
 
                     const SizedBox(height: 14),
 
-                    // ── Footer: likes count ───────────────────────────────
+
                     Row(
                       children: [
-                        // Likes display
+
                         FavoriteWidget(
                           isFavorite: widget.lugar.isFavorite,
                           likes: widget.lugar.likes,
@@ -252,7 +252,6 @@ class _LugarCardState extends State<LugarCard>
 
                         const Spacer(),
 
-                        // Subtle "explorar" affordance
                         Row(
                           children: [
                             Text(
@@ -285,7 +284,7 @@ class _LugarCardState extends State<LugarCard>
   }
 }
 
-// ── Floating favorite button overlaid on the image ───────────────────────────
+
 class _ImageFavoriteButton extends StatelessWidget {
   const _ImageFavoriteButton({
     required this.isFavorite,

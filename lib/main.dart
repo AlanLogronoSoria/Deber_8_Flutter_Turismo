@@ -12,7 +12,7 @@ class TurismoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Status bar icons in dark (visible over light backgrounds)
+
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -26,11 +26,11 @@ class TurismoApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1B4332), // Deep forest green — Quito's Andean palette
+          seedColor: const Color(0xFF1B4332),
           brightness: Brightness.light,
         ),
         fontFamily: 'Roboto',
-        scaffoldBackgroundColor: const Color(0xFFF5F2ED), // Warm parchment — colonial paper
+        scaffoldBackgroundColor: const Color(0xFFF5F2ED),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
