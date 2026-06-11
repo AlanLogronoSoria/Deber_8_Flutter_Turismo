@@ -6,10 +6,8 @@ import 'favorite_widget.dart';
 // ── Design tokens ────────────────────────────────────────────────────────────
 const _kGreen = Color(0xFF1B4332);       // Andean forest green — primary
 const _kGold = Color(0xFFD4A853);        // Colonial gold — accent
-const _kCream = Color(0xFFF5F2ED);       // Warm parchment — background
 const _kTextDark = Color(0xFF1A1A18);    // Near-black — headings
 const _kTextMid = Color(0xFF5C5C54);     // Mid-tone — body
-const _kTextLight = Color(0xFF9B9B90);   // Muted — secondary labels
 
 class LugarCard extends StatefulWidget {
   const LugarCard({
@@ -89,18 +87,18 @@ class _LugarCardState extends State<LugarCard>
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: _pressed
-                  ? _kGold.withOpacity(0.6)
+                  ? _kGold.withValues(alpha: 0.6)
                   : Colors.transparent,
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: _kGreen.withOpacity(0.06),
+                color: _kGreen.withValues(alpha: 0.06),
                 blurRadius: 16,
                 offset: const Offset(0, 4),
               ),
               BoxShadow(
-                color: Colors.black.withOpacity(0.04),
+                color: Colors.black.withValues(alpha: 0.04),
                 blurRadius: 4,
                 offset: const Offset(0, 1),
               ),
@@ -220,7 +218,7 @@ class _LugarCardState extends State<LugarCard>
                           width: 6,
                           height: 2,
                           decoration: BoxDecoration(
-                            color: _kGold.withOpacity(0.4),
+                            color: _kGold.withValues(alpha: 0.4),
                             borderRadius: BorderRadius.circular(1),
                           ),
                         ),
@@ -261,7 +259,7 @@ class _LugarCardState extends State<LugarCard>
                               'Explorar',
                               style: TextStyle(
                                 fontSize: 12,
-                                color: _kGreen.withOpacity(0.7),
+                                color: _kGreen.withValues(alpha: 0.7),
                                 fontWeight: FontWeight.w600,
                                 letterSpacing: 0.3,
                               ),
@@ -270,7 +268,7 @@ class _LugarCardState extends State<LugarCard>
                             Icon(
                               Icons.arrow_forward_rounded,
                               size: 13,
-                              color: _kGreen.withOpacity(0.7),
+                              color: _kGreen.withValues(alpha: 0.7),
                             ),
                           ],
                         ),
@@ -307,8 +305,8 @@ class _ImageFavoriteButton extends StatelessWidget {
         height: 36,
         decoration: BoxDecoration(
           color: isFavorite
-              ? const Color(0xFFD4253A).withOpacity(0.92)
-              : Colors.black.withOpacity(0.32),
+              ? const Color(0xFFD4253A).withValues(alpha: 0.92)
+              : Colors.black.withValues(alpha: 0.32),
           shape: BoxShape.circle,
         ),
         child: Icon(
